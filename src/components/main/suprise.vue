@@ -100,6 +100,7 @@
 #promotionItem
   width 375px
   height 130px
+  overflow hidden
   ul
     width 550px
     height 130

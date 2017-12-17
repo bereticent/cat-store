@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="total">
     <swipe></swipe>
     <sprites></sprites>
     <split></split>
@@ -7,6 +7,8 @@
     <split></split>
     <discount></discount>
     <split></split>
+    <toy></toy>
+    <other></other>
   </div>
 </template>
 
@@ -16,17 +18,22 @@
   import split from './split'
   import suprise from './suprise'
   import discount from './discount'
+  import toy from './toy'
+  import other from './other'
   export default {
     components:{
       swipe,
       sprites,
       split,
       suprise,
-      discount
+      discount,
+      toy,
+      other
     }
   }
 </script>
 
-<style scoped>
-
+<style lang="stylus" rel="stylesheet/stylus">
+  #total
+    padding-top 87px
 </style>

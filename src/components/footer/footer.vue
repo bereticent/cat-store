@@ -33,9 +33,16 @@
     background #fff
     margin  30px auto
     .ft
-      font-size 14px
       padding 15px 0 5px
-    .copy
+      text-align center
+      font-size 14px
+      span
+         padding 0 6px
+      :nth-child(1)
+        color red
+
+
+  .copy
       text-align:center;
       margin: 10px auto;
       padding-bottom:25px;
@@ -58,10 +65,11 @@
           display block
           width 42px
           height 40px
-          margin 3px auto
+          margin 3px auo
           background url("../../imgs/img.png") no-repeat
           background-size 600% 400%
           background-position -42px 0
+
 
 
 

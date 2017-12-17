@@ -2,7 +2,7 @@
   <div id="head">
     <div class="search">
       <div class="search-nav">
-        <a href="#" class="search-navT"><span>猫猫站</span><span>|</span><span>天堂◆</span></a>
+        <a href="#" class="search-navT"><span>猫猫站</span><span>|</span><span>蓬莱◆</span></a>
         <p class="search-text">
           <a href="#">
             <input type="search" placeholder="搜索商品和品牌" disabled="disabled">
@@ -38,6 +38,9 @@
     width 100%
     font-size 0
     height 87px
+    position fixed
+    z-index 10
+    background: #ffffff;
     .search
       width 100%
       height 41px
