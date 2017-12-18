@@ -5,7 +5,7 @@
         <li class="first_page"><router-link to="/main"></router-link></li>
         <li class="type"><router-link to="/types"></router-link></li>
         <li class="cart"><router-link to="/shopping"></router-link></li>
-        <li class="mypet"><router-link to="/pets"></router-link></li>
+        <li class="mypet"><router-link to="/register"></router-link></li>
       </ul>
     </div>
   </div>

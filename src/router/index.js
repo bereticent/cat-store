@@ -5,7 +5,7 @@ import VueRouter from 'vue-router'
 import main from '../pages/main/main.vue'
 import types from '../pages/types/types.vue'
 import shopping from '../pages/shopping/shopping.vue'
-import pets from '../pages/pets/pets.vue'
+import  register  from '../pages/register/register.vue'
 import goods from '../pages/types/goods.vue'
 import brands from '../pages/types/brands.vue'
 
@@ -53,8 +53,8 @@ export default new VueRouter({
       component: shopping
     },
     {
-      path: '/pets',
-      component:pets
+      path: '/register',
+      component: register
     },
 
   ]

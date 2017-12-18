@@ -30,7 +30,7 @@
   .header
     width 375px
     height 40px
-    border-1px (#000)
+    border-1px rgba(7, 17, 27, 0.1)
     position relative
     background: #ffffff;
     z-index 10

@@ -3,7 +3,7 @@
     <router-link to="/main"></router-link>
     <router-link to="/types"></router-link>
     <router-link to="/shopping"></router-link>
-    <router-link to="/pets"></router-link>
+    <router-link to="/register"></router-link>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
