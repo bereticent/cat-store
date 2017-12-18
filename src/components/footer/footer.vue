@@ -1,20 +1,11 @@
 <template>
   <div>
-    <div class="wap-footer-bar">
-      <div class="ft">
-        <span>触屏版</span>
-        <span>手机客户端</span>
-        <span>关于我们</span>
-        <span>联系我们</span>
-      </div>
-      <div class="copy">&copy wap.epet.com 版权：重庆易宠科技有限公司</div>
-    </div>
     <div class="footernav">
       <ul class="footernav_ul">
-        <li class="first_page"><a href=""></a></li>
-        <li class="type"><a href=""></a></li>
-        <li class="cart"><a href=""></a></li>
-        <li class="mypet"><a href=""></a></li>
+        <li class="first_page"><router-link to="/main"></router-link></li>
+        <li class="type"><router-link to="/types"></router-link></li>
+        <li class="cart"><router-link to="/shopping"></router-link></li>
+        <li class="mypet"><router-link to="/pets"></router-link></li>
       </ul>
     </div>
   </div>
@@ -22,32 +13,11 @@
 
 <script>
   export default {
+
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  .wap-footer-bar
-    width 375px
-    height 86px
-    text-align center
-    background #fff
-    margin  30px auto
-    .ft
-      padding 15px 0 5px
-      text-align center
-      font-size 14px
-      span
-         padding 0 6px
-      :nth-child(1)
-        color red
-
-
-  .copy
-      text-align:center;
-      margin: 10px auto;
-      padding-bottom:25px;
-      font-size:12px
-
   .footernav
     position fixed
     bottom 0
@@ -65,11 +35,10 @@
           display block
           width 42px
           height 40px
-          margin 3px auo
+          margin 3px auto
           background url("../../imgs/img.png") no-repeat
           background-size 600% 400%
           background-position -42px 0
-
 
 
 

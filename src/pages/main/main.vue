@@ -1,18 +1,23 @@
 <template>
-  <div id="total">
-    <swipe></swipe>
-    <sprites></sprites>
-    <split></split>
-    <suprise></suprise>
-    <split></split>
-    <discount></discount>
-    <split></split>
-    <toy></toy>
-    <other></other>
+  <div>
+    <ele-header></ele-header>
+    <div id="total">
+      <swipe></swipe>
+      <sprites></sprites>
+      <split></split>
+      <suprise></suprise>
+      <split></split>
+      <discount></discount>
+      <split></split>
+      <toy></toy>
+      <other></other>
+    </div>
   </div>
+
 </template>
 
 <script>
+  import header from './header'
   import swipe from './swipe'
   import sprites from './sprites'
   import split from './split'
@@ -22,6 +27,7 @@
   import other from './other'
   export default {
     components:{
+      'ele-header':header,
       swipe,
       sprites,
       split,

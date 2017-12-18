@@ -1,20 +1,21 @@
 <template>
   <div>
-    <ele-header></ele-header>
-    <ele-main></ele-main>
+    <router-link to="/main"></router-link>
+    <router-link to="/types"></router-link>
+    <router-link to="/shopping"></router-link>
+    <router-link to="/pets"></router-link>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
     <ele-footer></ele-footer>
   </div>
 </template>
 
 <script>
-  import header from './components/header/header'
-  import main from './components/main/main'
   import footer from './components/footer/footer'
 
 export default {
   components:{
-    'ele-header': header,
-    'ele-main': main,
     'ele-footer': footer
   }
 }

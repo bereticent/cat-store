@@ -1,11 +1,61 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
 
-Vue.use(Router)
+import main from '../pages/main/main.vue'
+import types from '../pages/types/types.vue'
+import shopping from '../pages/shopping/shopping.vue'
+import pets from '../pages/pets/pets.vue'
+import goods from '../pages/types/goods.vue'
+import brands from '../pages/types/brands.vue'
 
-export default new Router({
+
+Vue.use(VueRouter)
+
+export default new VueRouter({
+  // linkExactActiveClass:"xfz",
+  // linkActiveClass:"active",
   routes: [
+    {
+      path: '/',
+      'redirect': '/main'
+    },
+    {
+      path: '/types',
+      component: types,
+      children: [
+        {
+          path: '/types',
+          'redirect': '/types/goods'
+        },
+        {
+          path: 'goods',
+          component: goods
+        },
+        {
+          path: 'brands',
+          component: brands
+        },
+        ]
+
+
+    },
+    {
+      path: '/main',
+      component: main  // 返回组件的函数
+    },
+    {
+      path: '/shopping',
+      component: shopping
+    },
+    {
+      path: '/shopping',
+      component: shopping
+    },
+    {
+      path: '/pets',
+      component:pets
+    },
 
   ]
 })

@@ -1,5 +1,7 @@
 <template>
-
+  <div>
+    shopping
+  </div>
 </template>
 
 <script>
@@ -7,6 +9,6 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style scoped>
 
 </style>

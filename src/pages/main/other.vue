@@ -63,6 +63,15 @@
     <div class="end">
       <img src="../../imgs/2b4302241c921a29523ce43d465cd28d.jpg">
     </div>
+    <div class="footer-bar">
+      <div class="ft">
+        <span>触屏版</span>
+        <span>手机客户端</span>
+        <span>关于我们</span>
+        <span>联系我们</span>
+      </div>
+      <div class="copy">&copy wap.epet.com 版权：重庆易宠科技有限公司</div>
+    </div>
   </div>
 </template>
 
@@ -106,4 +115,23 @@
     img
       width 375px
       height 30.5px
+  .footer-bar
+    width 375px
+    height 86px
+    text-align center
+    background #fff
+    margin 30px auto
+    .ft
+      padding 15px 0 5px
+      text-align center
+      font-size 14px
+      span
+        padding 0 6px
+      :nth-child(1)
+        color red
+    .copy
+      text-align:center;
+      margin: 10px auto;
+      padding-bottom:25px;
+      font-size:12px
 </style>

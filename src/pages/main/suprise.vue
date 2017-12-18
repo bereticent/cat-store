@@ -15,7 +15,7 @@
       </a>
     </div>
   </div>
-  <div id="promotionItem">
+  <div id="promotionItem" ref="wrapper">
     <ul>
       <li>
         <a href="javascript:;">
@@ -60,7 +60,17 @@
 </template>
 
 <script>
+  import BScroll from 'better-scroll'
   export default {
+    data () {
+      return {
+      }
+    },
+    mounted() {
+      new BScroll(this.$refs.wrapper, {
+        scrollX: true
+      })
+    }
   }
 </script>
 

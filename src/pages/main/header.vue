@@ -13,7 +13,7 @@
         </a>
       </div>
     </div>
-    <div class="nav">
+    <div class="nav" ref="wrapper">
       <ul>
         <li><a href="#">首页</a></li>
         <li><a href="#">猫猫主粮</a></li>
@@ -28,7 +28,17 @@
 </template>
 
 <script>
+  import BScroll from 'better-scroll'
   export default {
+    data () {
+      return {
+      }
+    },
+    mounted() {
+      new BScroll(this.$refs.wrapper, {
+        scrollX: true
+      })
+    }
 
   }
 </script>
@@ -39,7 +49,7 @@
     font-size 0
     height 87px
     position fixed
-    z-index 10
+    z-index 2
     background: #ffffff;
     .search
       width 100%
@@ -90,10 +100,10 @@
 
     .nav
       background #fff
-      width 100%
+      width 375px
       height 36px
       ul
-        width 100%
+        width 518px
         height 100%
         overflow hidden
         li
