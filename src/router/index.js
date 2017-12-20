@@ -10,7 +10,7 @@ import goods from '../pages/types/goods.vue'
 import brands from '../pages/types/brands.vue'
 
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
   // linkExactActiveClass:"xfz",
@@ -43,10 +43,6 @@ export default new VueRouter({
     {
       path: '/main',
       component: main  // 返回组件的函数
-    },
-    {
-      path: '/shopping',
-      component: shopping
     },
     {
       path: '/shopping',

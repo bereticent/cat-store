@@ -1,131 +1,38 @@
 <template>
 <div id="wrap">
   <div class="split"></div>
-  <div class="title">
-    <p>——主粮品牌——</p>
+  <div class="" v-for="name in types.brands">
+    <div class="title">
+      <p>——{{name.title}}——</p>
+    </div>
+    <div class="list">
+      <ul>
+        <li v-for="brand in name.list">
+          <img :src="brand.logo" >
+          <p>{{brand.name}}</p>
+          <p>{{brand.address}}</p>
+        </li>
+      </ul>
+    </div>
+    <split></split>
   </div>
-  <div class="list">
-    <ul>
-      <li>
-        <img src="./imgs/brand/a.jpg" >
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-      <li>
-        <img src="./imgs/brand/a.jpg">
-        <p>冠能</p>
-        <p>美国</p>
-      </li>
-    </ul>
-  </div>
-  <split></split>
-  <div class="title">
-    <p>——主粮品牌——</p>
-  </div>
-  <div>
-    <ul>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-    </ul>
-  </div>
-  <split></split>
-  <div class="title">
-    <p>——主粮品牌——</p>
-  </div>
-  <div>
-    <ul>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-      <li>
-        <img>
-      </li>
-    </ul>
-  </div>
+
+
 </div>
 </template>
 
 <script>
   import split from '../main/split'
+  import {mapState} from 'vuex'
   export default {
+    data () {
+      return {
+      }
+    },
+
+    computed:{
+      ...mapState(['types'])
+    },
     components:{
       split
     }
@@ -133,6 +40,7 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  @import "../../common/stylus/mixin.styl"
 #wrap
   box-sizing border-box
   .split
@@ -154,10 +62,12 @@
       left 140px
   .list
     width 365px
-    height 508px
+    overflow hidden
+    padding-bottom 20px
     ul
       width 100%
       height 100%
+      clearFix()
       li
         width 121.64px
         height 107px

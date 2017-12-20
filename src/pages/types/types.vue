@@ -12,6 +12,7 @@
         </router-link>
         <img src="../../imgs/search.png">
       </div>
+      <span class="small"></span>
       <div class="border-1px"></div>
     </div>
     <keep-alive>
@@ -34,6 +35,13 @@
     position relative
     background: #ffffff;
     z-index 10
+    .small
+      position: absolute;
+      left 135px
+      bottom .2rem
+      width 35px
+      height 2px
+      background: #ed4044
     .left
       width 50%
       height 40px

@@ -20,6 +20,7 @@
 <style lang="stylus" rel="stylesheet/stylus">
   .footernav
     position fixed
+    margin-top 45px
     bottom 0
     height 45px
     width 375px

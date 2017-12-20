@@ -2,23 +2,10 @@
 <div>
   <div id="nav" ref="wrapper">
     <ul>
-      <li data-id="recommend">为您推荐</li>
-      <li data-id="food">猫咪主粮</li>
-      <li data-id="snacks">猫咪零食</li>
-      <li data-id="daily">猫咪日用</li>
-      <li data-id="toys">猫咪玩具</li>
-      <li data-id="health">猫咪保健</li>
-      <li data-id="medical">猫咪医疗</li>
-      <li data-id="trip">猫咪出行</li>
-      <li data-id="dress">猫咪装扮</li>
-      <li data-id="beautify">猫咪美容</li>
-      <li data-id="shampoo">猫咪香波</li>
-      <li data-id="rim">猫咪周边</li>
-      <li data-id="custom">猫咪定制</li>
-      <li data-id="books">猫猫书籍</li>
+      <li data-id="recommend" v-for="good in types.categorys">{{good.name}}</li>
     </ul>
   </div>
-  <div id="recommend-list">
+  <div id="recommend-list" ref="wrap">
     <p>热门分类</p>
     <ul>
       <li>
@@ -52,13 +39,23 @@
 
 <script>
   import BScroll from 'better-scroll'
+  import {mapState} from 'vuex'
   export default {
     data () {
       return {
       }
     },
+    computed:{
+      ...mapState(['types'])
+    },
+    methods:{
+
+    },
     mounted() {
       new BScroll(this.$refs.wrapper, {
+        scrollY: true
+      });
+      new BScroll(this.$refs.wrap, {
         scrollY: true
       })
     }
@@ -73,7 +70,6 @@
   ul
     width 70px
     height 700px
-
     li
       padding: 15px 0;
       border-bottom: 1px solid #f3f4f5;

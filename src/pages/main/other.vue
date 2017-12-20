@@ -8,8 +8,11 @@
     <div class="cat-video">
       <img src="../../imgs/123.jpg" class="cat-video">
       <div>
-        <span>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</span>
-        <span></span>
+        <p>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</p>
+        <span class="cmall"></span>
+        <i>68272</i>
+        <span class="line">|</span>
+        01:53
       </div>
     </div>
     <div class="split"></div>
@@ -45,8 +48,11 @@
     <div class="cat-video">
       <img src="../../imgs/123.jpg" class="cat-video">
       <div>
-        <span>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</span>
-        <span></span>
+        <p>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</p>
+        <span class="cmall"></span>
+        <i>68272</i>
+        <span class="line">|</span>
+        01:53
       </div>
     </div>
     <div class="title">
@@ -56,8 +62,11 @@
     <div class="cat-video">
       <img src="../../imgs/123.jpg" class="cat-video">
       <div>
-        <span>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</span>
-        <span></span>
+        <p>狮王 猫咪去毛喷剂  防静电 防打结 梳毛轻松</p>
+        <span class="cmall"></span>
+        <i>68272</i>
+        <span class="line">|</span>
+        <i>01:53</i>
       </div>
     </div>
     <div class="end">
@@ -106,6 +115,28 @@
     div
       width 375px
       height 58px
+      padding 10px
+      font-size: 12px;
+      text-align center
+      p
+        text-align center
+        color #333
+        line-height 19px
+      .cmall
+        display inline-block
+        width 10px
+        height 9px
+        background url("./view-black.png") no-repeat
+        background-size 100% 100%
+        line-height 19px
+      i
+        font-style normal
+        color #999
+      .line
+        margin-left: 10px
+        margin-right: 10px
+
+
   .special-sall
     img
       width 375px

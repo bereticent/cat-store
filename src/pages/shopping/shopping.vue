@@ -1,24 +1,46 @@
 <template>
   <div>
-    <div class="cart_wrapper">
-      <div class="cart_header">
-        <div class="cart_header_left">
+    <div class="shopping_wrapper">
+      <div class="shopping_header">
+        <div class="shopping_header_left">
           <img src="./bico1.png" >
         </div>
-        <div class="cart_header_middle">
+        <div class="shopping_header_middle">
           <span>购物车</span>
         </div>
-        <div class="cart_header_right">
-          <img src="./new.png" alt="">
+        <div class="shopping_header_right">
+          <img src="./new.png" @click="showTool">
         </div>
       </div>
 
-      <div class="cart_content">
-        <div class="cart_icon">
+      <div class="shopping-nav" v-show="isShowTool">
+        <ul>
+          <li>
+            <span class="s-h-img"></span>
+            <p>首页</p>
+          </li>
+          <li>
+            <span class="s-l-img"></span>
+            <p>商品分类</p>
+          </li>
+          <li>
+            <span class="s-c-img"></span>
+            <div class="total">0</div>
+            <p>购物车</p>
+          </li>
+          <li>
+            <span class="s-m-img"></span>
+            <p>我的e宠</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="shopping_content">
+        <div class="shopping_icon">
           <span></span>
         </div>
-        <div class="cart_empty">购物车是空的</div>
-        <div class="cart_button">
+        <div class="shopping_empty">购物车是空的</div>
+        <div class="shopping_button">
           <a href="javascript:;"><span>去逛逛</span></a>
           <a href="javascript:;"><span>我的收藏</span></a>
         </div>
@@ -28,18 +50,32 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    data() {
+      return {
+        isShowTool: false
+      }
+    },
+
+    computed: {},
+
+    methods: {
+      showTool() {
+        this.isShowTool = !this.isShowTool;
+      }
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin.styl"
 
-  .cart_header
+  .shopping_header
     position relative
     width 100%
     height 50px
     border-1px(#f3f4f5)
-    .cart_header_left
+    .shopping_header_left
       display inline-block
       float left
       width 22px
@@ -49,7 +85,7 @@
       img
         width 10px
         height 18px
-    .cart_header_middle
+    .shopping_header_middle
       width 86%
       height 50px
       display inline-block
@@ -59,7 +95,7 @@
       font-size 18px
       line-height 50px
       margin-right -6%
-    .cart_header_right
+    .shopping_header_right
       display inline-block
       float right
       width 20px
@@ -68,10 +104,63 @@
       img
         width 20px
         height 20px
-  .cart_content
+
+  .shopping-nav
+    background #fff
+    width 100%
+    height 75px
+    padding px 0
+    border-bottom 1px solid #d7d7d7
+    ul
+      li
+        position relative
+        float left
+        width 25%
+        height 50px
+        margin 12.5px 0
+        .total
+          height 18px
+          width: 18px
+          color: #fff
+          text-align center
+          line-height 18px
+          font-size 12px
+          background #FF0000
+          border-radius 100%
+          border #fff solid 2px
+          position absolute
+          top -6px
+          left 48px
+        span
+          display block
+          margin 0 auto
+          width 25px
+          height 30px
+          &.s-h-img
+            background url(./head_icon1.png) no-repeat
+            background-size 30px 30px
+            background-position -3px 0
+          &.s-l-img
+            background url(./head_icon2.png) no-repeat
+            background-size 30px 30px
+            background-position -3px 0
+          &.s-c-img
+            background url(./head_icon4.png) no-repeat
+            background-size 30px 30px
+            background-position -3px 0
+          &.s-m-img
+            background url(./head_icon5.png) no-repeat
+            background-size 30px 30px
+            background-position -3px 0
+        p
+          color #666
+          font-size 14px
+          text-align center
+
+  .shopping_content
     width 100%
     height 298px
-    .cart_icon
+    .shopping_icon
       width 100px
       height 100px
       margin 50px 0 20px 0
@@ -83,12 +172,12 @@
         background url("./cart-ico.png") no-repeat
         background-size 105px auto
         background-position 0 -160px
-    .cart_empty
+    .shopping_empty
       width 100%
       height 20px
       color #dbdbdb
       text-align center
-    .cart_button
+    .shopping_button
       text-align center
       box-sizing border-box
       margin-top 20px

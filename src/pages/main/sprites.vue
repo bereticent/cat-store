@@ -1,67 +1,25 @@
 <template>
   <div id="wrap">
     <ul class="row">
-        <li>
+        <li v-for="img in main.datas[1].menus">
           <a href="javascript:;">
-            <img src="../../imgs/E宠团/1-1.jpg">
+            <img :src="img.image">
           </a>
         </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/1-2.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/1-3.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/1-4.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/1-5.jpg">
-        </a>
-      </li>
-    </ul>
-    <ul class="row">
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/2-1.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/2-2.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/2-3.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/2-4.jpg">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:;">
-          <img src="../../imgs/E宠团/2-5.jpg">
-        </a>
-      </li>
     </ul>
   </div>
 </template>
-
 <script>
+  import {mapState} from 'vuex'
   export default {
+    data() {
+      return {}
+    },
+    computed: {
+      ...mapState(['main'])
+    }
   }
 </script>
-
 <style lang="stylus" rel="stylesheet/stylus">
 #wrap
   overflow hidden

@@ -2,26 +2,21 @@
   <div id="head">
     <div class="search">
       <div class="search-nav">
-        <a href="#" class="search-navT"><span>猫猫站</span><span>|</span><span>蓬莱◆</span></a>
+        <a href="javascript:;" class="search-navT"><span>猫猫站</span><span>|</span><span>蓬莱◆</span></a>
         <p class="search-text">
-          <a href="#">
+          <a href="javascript:;">
             <input type="search" placeholder="搜索商品和品牌" disabled="disabled">
           </a>
         </p>
-        <a href="#" class="search-img">
+        <a href="javascript:;" class="search-img">
           <img src="../../imgs/mydope.png">
         </a>
       </div>
     </div>
     <div class="nav" ref="wrapper">
       <ul>
-        <li><a href="#">首页</a></li>
-        <li><a href="#">猫猫主粮</a></li>
-        <li><a href="#">罐头超市</a></li>
-        <li><a href="#">医疗保健</a></li>
-        <li><a href="#">猫砂</a></li>
-        <li><a href="#">零食玩具</a></li>
-        <li><a href="#">美容香波</a></li>
+        <li v-for="(nav,index) in main.menus" :key="index"><a href="javascript:;" class="active">{{nav.menu_name}}</a></li>
+        <span class="small"></span>
       </ul>
     </div>
   </div>
@@ -29,6 +24,7 @@
 
 <script>
   import BScroll from 'better-scroll'
+  import {mapState} from 'vuex'
   export default {
     data () {
       return {
@@ -38,6 +34,9 @@
       new BScroll(this.$refs.wrapper, {
         scrollX: true
       })
+    },
+    computed:{
+      ...mapState(['main'])
     }
 
   }
@@ -53,7 +52,7 @@
     background: #ffffff;
     .search
       width 100%
-      height 41px
+      height 51px
       padding 5px 0
       background #fff
       text-align center
@@ -103,12 +102,24 @@
       width 375px
       height 36px
       ul
+        position relative
         width 518px
         height 100%
         overflow hidden
+        .active
+          color #e73f85;
+        span
+          position absolute
+          left 20px
+          bottom .2rem
+          width 33.59px
+          height 2px
+          background #e73f85
         li
           float left
           width 74px
+          .active
+            color #e73f85
           a
             display: block
             width 100%

@@ -17,7 +17,7 @@
   </div>
   <div id="promotionItem" ref="wrapper">
     <ul>
-      <li>
+      <li >
         <a href="javascript:;">
           <img src="../../imgs/day/1.jpg">
           <span class="nowPrice">￥1.20</span>
@@ -60,6 +60,7 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex'
   import BScroll from 'better-scroll'
   export default {
     data () {
@@ -70,6 +71,9 @@
       new BScroll(this.$refs.wrapper, {
         scrollX: true
       })
+    },
+    computed: {
+      ...mapState(['main'])
     }
   }
 </script>
