@@ -1,5 +1,5 @@
 <template>
-<div id="wrap">
+<div id="contain">
   <div class="split"></div>
   <div class="" v-for="name in types.brands">
     <div class="title">
@@ -41,8 +41,10 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixin.styl"
-#wrap
+#contain
   box-sizing border-box
+  position relative
+  bottom -40px
   .split
     width: 100%
     height: 5px

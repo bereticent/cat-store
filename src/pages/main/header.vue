@@ -106,8 +106,6 @@
         width 518px
         height 100%
         overflow hidden
-        .active
-          color #e73f85;
         span
           position absolute
           left 20px
@@ -118,8 +116,9 @@
         li
           float left
           width 74px
-          .active
-            color #e73f85
+          &:first-child
+            a
+              color #e73f85;
           a
             display: block
             width 100%
@@ -128,4 +127,5 @@
             font-size 14px
             text-align center
             color #666
+
 </style>

@@ -1,8 +1,8 @@
 <template>
 <div>
   <div id="nav" ref="wrapper">
-    <ul>
-      <li data-id="recommend" v-for="good in types.categorys">{{good.name}}</li>
+    <ul class="nav-list">
+      <li data-id="recommend" v-for="(good,index) in types.categorys" :key="index"   @click="navIndex(index)">{{good.name}}</li>
     </ul>
   </div>
   <div id="recommend-list" ref="wrap">
@@ -49,6 +49,17 @@
       ...mapState(['types'])
     },
     methods:{
+      navIndex(index,ev) {
+        console.log ( 'index = ' + index );
+        ev=ev||event;
+        let listNodes=document.querySelectorAll('.nav-list>li');
+        for (let i=0;i<listNodes.length;i++){
+          listNodes[i].style.backgroundColor='#fff';
+          listNodes[i].style.color='black'
+        }
+        ev.target.style.backgroundColor='#f3f4f5';
+        ev.target.style.color='red';
+      }
 
     },
     mounted() {
@@ -67,7 +78,9 @@
   width 70px
   height 600px
   float left
-  ul
+  position relative
+  bottom -50px
+  .nav-list
     width 70px
     height 700px
     li
@@ -82,6 +95,9 @@
       text-align center
       &:first-child
         color red
+    .liColor
+      color red
+
 #recommend-list
   width 300px
   height 320px
@@ -89,6 +105,7 @@
   padding-left 10px
   position relative
   overflow hidden
+  bottom -50px
   p
     width 290px
     height 20px
